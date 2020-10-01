@@ -1,0 +1,37 @@
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+    margin: 1rem 0.5rem;
+
+    background: linear-gradient(to top, $color-text 20%, $color-secondary 25%, $color-secondary);
+    border-radius: 10px;
+    box-shadow: $box-shadow-img;
+    overflow: hidden;
+    text-align: center;
+
+    &__data {
+        flex: 0.8;
+        margin: 5px 0 0 0;
+        color: $color-primary;
+        font-size: 2rem;
+
+        span {
+            display: block;
+            color: $color-white;
+        }
+    }
+
+    &__desc {
+        flex: 0.2;
+        margin: 0;
+        width: 100%;
+
+        background: $color-text;
+        color: white;
+        font-weight: 400;
+        line-height: 1.6rem;
+    }
+}

@@ -1,0 +1,30 @@
+//- Declaration navigation du header (client)
+
+mixin nav
+    nav.navigation
+        ul
+            each item in items
+                li.navigation__item: a(href=item.link)= item.title
+
+            //- ajout d'une icone provisoire pour lien vers login
+
+            li.navigation__item
+                a(href="/").user
+                    svg(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z')
+
+
+//- Déclaration card menu (client)
+
+mixin cardMenu(img, title, ingredient, price, info)
+    .col-lg-3.col-md-6
+        article.menu
+            .card
+                img.card-img-top.menu__img(src=img, alt=title)
+                .card-body
+                    h5.heading__sm.card-title.menu__title #{title}
+                    h4.heading__md.card__text.menu__price #{price} €
+                    p.menu__text.menu__ingredient #{ingredient}
+                    p.menu__text.menu__desc <small class="text-muted">#{info}</small>
+                .card-footer
+                    a.btn.btn-primary.td-btn.td-btn__primary--small(href='article.html') Voir plus

@@ -1,0 +1,244 @@
+//- liens du header (client)
+//- liste des menus / boissons (client et dashboard)
+
+//- ===============================================================================
+//- LIENS HEADER - CLIENT
+//- ===============================================================================
+- 
+    var items = [
+        { 
+            title: 'Accueil', 
+            link: '/client.html' 
+        },
+        { 
+            title: 'Concept', 
+            link: '/client.html#about' 
+        },
+        { 
+            title: 'Notre carte', 
+            link: '/client.html#menu' 
+        },
+        { 
+            title: 'Nous trouver', 
+            link: '/client.html#location' 
+        }
+    ]
+
+//- ===============================================================================
+//- LISTE DES MENUS / BOISSONS - CLIENT ET DASHBOARD
+//- ===============================================================================
+-
+    var menus = [
+        {
+            title: 'Saumon sauce citron',
+            img: './images/plat1.png',
+            ingredient: 'saumon, salade, tomate, persil, citron',
+            price: '12.99',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: 'contient du gluten',
+            date_create: '23/05/20',
+            date_modif: '28/08/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 5
+        },
+        {
+            title: 'Salade hawaienne',
+            img: './images/plat3.png',
+            ingredient: 'Salade, tomate, feta, concombre, oignon, vinaigrette citron',
+            price: '9.99',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: 'Servi uniquement le midi',
+            date_create: '14/07/20',
+            date_modif: '20/09/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 4.5
+        },
+        {
+            title: 'Pané de colin au citron',
+            img: './images/plat4.png',
+            ingredient: 'Filet de colin, salade, frites',
+            price: '12.49',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: '',
+            date_create: '07/03/20',
+            date_modif: '12/06/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 3.9
+        },
+        {
+            title: 'Daurade citronnée',
+            img: './images/plat5.png',
+            ingredient: 'Daurade, salade, olive, sauce citron/aneth',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            price: '16.49',
+            info: 'Suivant pêche du jour',
+            date_create: '16/09/20',
+            date_modif: '21/09/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 5
+        },
+        {
+            title: 'Poulet rôti au citron',
+            img: './images/plat6.png',
+            ingredient: 'Poulet, purée de citron jaune/vert',
+            price: '17.99',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: '',
+            date_create: '21/12/18',
+            date_modif: '16/08/20',
+            visible: 'non',
+            link: './article.html',
+            stars: 4.2
+        },
+        {
+            title: 'Crevettes hawaienne',
+            img: './images/plat7.png',
+            ingredient: 'Crevettes, salade, persil, mayonnaise au citron',
+            price: '11.49',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: '',
+            date_create: '28/03/20',
+            date_modif: '14/08/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 4.8
+        },
+        {
+            title: 'Key Lime Pie',
+            img: './images/dessert1.png',
+            ingredient: 'Citron, meringue, crème',
+            price: '7.49',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: '',
+            date_create: '14/01/20',
+            date_modif: '22/06/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 4.7
+        },
+        {
+            title: 'Macarons au Mojito',
+            img: './images/dessert2.png',
+            ingredient: 'Citron, menthe',
+            price: '9.99',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: 'Vendu en boite de 6',
+            date_create: '17/09/20',
+            date_modif: '19/09/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 4.1
+        }
+    ]
+
+-
+    var boissons = [
+        {
+            title: 'Guacamole',
+            img: './images/snack1.png',
+            ingredient: 'Avocat, citron, tomate',
+            price: '5.49',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: 'Idéal avec les Chips au citron',
+            date_create: '12/04/20',
+            date_modif: '22/07/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 4.7
+        },
+        {
+            title: 'Chips au citron',
+            img: './images/snack2.png',
+            ingredient: 'Pomme de terre, huile, citron',
+            price: '3.99',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: '',
+            date_create: '23/04/19',
+            date_modif: '12/10/19',
+            visible: 'oui',
+            link: './article.html',
+            stars: 4.3
+        },
+        {
+            title: 'Mojito hawaien',
+            img: './images/boisson1.png',
+            ingredient: 'Rhum, citron vert, menthe',
+            price: '6.49',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: 'Contient de l\'alcool',
+            date_create: '23/09/19',
+            date_modif: '12/08/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 4.6
+        },
+        {
+            title: 'Bière Henry\'s',
+            img: './images/boisson2.png',
+            ingredient: 'Bière aromatisé au citron',
+            price: '5.49',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: 'Contient de l\'alcool',
+            date_create: '16/04/20',
+            date_modif: '19/07/20',
+            visible: 'non',
+            link: './article.html',
+            stars: 4.8
+        },
+        {
+            title: 'Le Lemona Breeze',
+            img: './images/boisson3.png',
+            ingredient: 'Coktail au citron, vin rouge et baies rouges',
+            price: '7.49',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: 'Contient de l\'alcool',
+            date_create: '12/11/19',
+            date_modif: '26/06/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 5
+        },
+        {
+            title: 'Gin Tonic',
+            img: './images/boisson4.png',
+            ingredient: 'Gin, Schweppes, citron vert',
+            price: '4.99',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: 'Contient de l\'alcool',
+            date_create: '17/06/20',
+            date_modif: '28/07/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 3.7
+        },
+        {
+            title: 'Jus de citron frais',
+            img: './images/boisson5.png',
+            ingredient: 'Citron, eau',
+            price: '6.49',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: '',
+            date_create: '16/07/20',
+            date_modif: '28/09/20',
+            visible: 'non',
+            link: './article.html',
+            stars: 4.2
+        },
+        {
+            title: 'Milkshake hawaien',
+            img: './images/boisson6.png',
+            ingredient: 'Citron, lait, eau',
+            price: '3.99',
+            desc: 'Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.',
+            info: 'Contient du lactose',
+            date_create: '14/11/19',
+            date_modif: '28/07/20',
+            visible: 'oui',
+            link: './article.html',
+            stars: 4.8
+        }
+    ]

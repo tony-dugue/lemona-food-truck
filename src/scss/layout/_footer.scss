@@ -1,0 +1,41 @@
+.footer {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-text;
+
+    .copyright {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    .social {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__icon {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+/* =============== DASHBOARD =============== */
+
+.dashboard {
+    .footer {
+        background: #ebebeb;
+        .logo {
+            padding-left: 40px;
+        }
+        .social {
+            padding-right: 45px;
+        }
+    }
+}

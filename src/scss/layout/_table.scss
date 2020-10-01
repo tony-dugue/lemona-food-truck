@@ -1,0 +1,31 @@
+.menuEdition {
+    font-size: 1rem;
+    font-weight: 300;
+
+    &__head {
+        &-item {
+            color: white;
+            font-size: 1.1rem;
+            background: black;
+
+            th {
+                background-color: $color-text;
+            }
+        }
+    }
+
+    &__body { 
+        th {
+        font-size: 1rem;
+        font-weight: 400;
+        }
+
+        &-img {
+            height: 40px;
+        }
+
+        .icon-control {
+            width: 3.5rem;
+        }
+    }
+}

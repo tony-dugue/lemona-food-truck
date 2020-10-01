@@ -1,0 +1,90 @@
+//- ===============================================================================
+//- LAYOUT
+//- ===============================================================================
+
+//- Declaration Dashboard Header
+mixin dashboardHeader
+    header.dashboard__header.navbar.navbar-dark.sticky-top.flex-md-nowrap.p-0.py-2.align-items-center
+        .dashboard__header-logo
+            +logo
+        .dashboard__header-search.d-flex.align-items-center
+            input.form-control.dashboard__header-searchInput(type='text', placeholder='Rechercher')
+            a(href='#')
+                svg.dashboard__header-searchIcon(width='1em' height='1em' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z')
+                    path(d='M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z')
+
+        .dashboard__header-link
+            a.nav-link(href='/') Déconnexion
+
+//- Declaration Dashboard Sidebar
+
+mixin dashboardSidebar
+    sidebar
+        nav
+
+            .border-bottom.mb-3
+                .sidebar__avatar
+                    img.sidebar__avatar-logo(src="./images/avatar.png" alt="avatar")
+                    h5.sidebar__avatar-name Tony Dugué
+
+            ul.nav.flex-column
+                li.nav-item: a.nav-link.sidebar__item.active(href='./client.html')
+                    | Voir le site
+                li.nav-item: a.nav-link.sidebar__item.active(href='./dashboard.html') 
+                    | Voir le Dashboard
+            
+            h6.px-3.mt-4.mb-1.sidebar__title Edition
+
+            ul.nav.flex-column.mb-2
+                li.nav-item: a.nav-link.sidebar__item(href='./construction.html') 
+                    | Ajouter un profil
+                li.nav-item: a.nav-link.sidebar__item(href='./add.html')
+                    | Ajouter un menu
+                li.nav-item: a.nav-link.sidebar__item(href='./add.html')
+                    | Ajouter une boisson
+
+            h6.px-3.mt-4.mb-1.sidebar__title Communication
+
+            ul.nav.flex-column.mb-2
+                li.nav-item: a.nav-link.sidebar__item(href='./construction.html')
+                    | Gestion des médias
+                li.nav-item: a.nav-link.sidebar__item(href='./construction.html')
+                    | Newsletter
+                li.nav-item: a.nav-link.sidebar__item(href='./construction.html')
+                    | Calendrier lieux
+
+//- Declaration Dashboard Footer
+mixin dashboardFooter
+
+    .row
+        .footer.d-flex.justify-content-between.align-items-center.w-100.mt-5
+            .col
+                +logo
+            .col
+                +social
+
+//- ===============================================================================
+//- AFFICHAGE DES MENUS
+//- ===============================================================================
+
+//- Déclaration d'un menu dans le tableau edition du dashboard
+mixin tableMenu(key, img, title, price, date_create, date_modif, visible)
+    tr
+        th #{key}
+        th.menuEdition__body-title #{title}
+        th
+            img.menuEdition__body-img(src=img,alt=title)
+        th.menuEdition__body-price #{price}
+        th.menuEdition__body-desc #{date_create}
+        th.menuEdition__body-desc #{date_modif}
+        th.menuEdition__body-visible #{visible}
+        th
+            .icon-control
+                a.mr-2(href="./edit.html")
+                    svg.icon-edit(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' d='M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z')
+
+                a(href="./dashboard.html")
+                    svg.icon-delete(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                        path(fill-rule='evenodd' d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z')

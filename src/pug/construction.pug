@@ -1,0 +1,33 @@
+include mixins/_utils.pug
+include mixins/_utils-dashboard.pug
+
+doctype html
+html(lang='fr')
+    +head('En construction', '', 'dashboard.css')
+
+    body
+        .dashboard
+            +dashboardHeader
+            .container-fluid
+                .row
+                    .col-md-3.col-lg-2.d-md-block.collapse.pt-3.sidebar
+                        +dashboardSidebar
+
+                    main.dashboard__content.col-md-9.ml-sm-auto.col-lg-10.px-4.mx-2
+
+                        //- ================= MAIN CONTENT ============================
+                        
+                        .construction-page.d-flex.flex-column.justify-content-between
+                            .row
+                                img(src="./images/picture-hand.png", alt="")
+
+                            .container
+                                .row.flex-column.justify-content-center.align-items-center.text-center
+
+                                    h3 Nous sommes désolé ...
+
+                                    h2.heading__dash.heading__dash--modif ... Citrons en cours de pressage !!
+
+                                    h3 Cette page est en construction et n'est pas encore disponible.
+
+                            +dashboardFooter

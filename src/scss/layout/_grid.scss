@@ -1,0 +1,44 @@
+/* =============== CLIENT =============== */
+
+.client {
+    padding: 10px 30px 30px 30px;
+    background: linear-gradient(to bottom, $color-black 100vh, #FBCA00);
+
+    .main {
+        margin-top: 5vh;
+        background: $color-white;
+        border-radius: 15px;
+        padding-top: 60px;
+        overflow: hidden;
+    }
+}
+
+/* =============== PAGE CONNEXION =============== */
+
+.page-login {
+    background: linear-gradient(to bottom, $color-black 40vh,  $color-primary 70vh, $color-primary);
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+
+    .client {
+        padding: 20px;
+    }
+}
+
+/* =============== DASHBOARD =============== */
+
+.dashboard {
+    font-weight: 600;
+
+    &__content {
+        display: block;
+        margin-top: 0.5rem;
+
+        .construction-page {
+            height: calc(100vh - 70px);
+        }
+    }
+}

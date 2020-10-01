@@ -1,0 +1,20 @@
+.dashboard {
+    .dash-progress {
+
+        &-1 {
+            background: linear-gradient(to right, rgba($color-secondary, 0), rgba($color-secondary, 1));
+        }
+
+        &-2 {
+            background: linear-gradient(to right, rgba($color-secondary, 0), rgba($color-secondary, .8));
+        }
+
+        &-3 {
+            background: linear-gradient(to right, rgba($color-secondary, 0), rgba($color-secondary, .7));
+        }
+
+        &-4 {
+            background: linear-gradient(to right, rgba($color-secondary, 0), rgba($color-secondary, .6));
+        }
+    }
+}

@@ -1,0 +1,68 @@
+/* =============== RESEAUX SOCIAUX =============== */
+
+.social__icon {
+
+    .facebook-icon,
+    .twitter-icon,
+    .youtube-icon,
+    .instagram-icon {
+        fill: $color-text;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+        .facebook-icon { fill: $color-social-fcb; }
+        .twitter-icon { fill: $color-social-twitter; }
+        .youtube-icon { fill: $color-social-youtube; } 
+        .instagram-icon { fill: $color-social-instagram; }
+    }
+
+    & > svg {
+        color: $color-white;
+    }
+}
+
+/* ========= CHEVRONS HERO (client) ========== */
+
+.icon-chevron {
+    color: $color-secondary;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* ============= CHECK (client) ============== */
+
+.icon-check {
+    color: green;
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    .icon-check {
+        font-size: 2rem;
+
+        & + h5 {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.icon-edit {
+    display: inline-block;
+
+    color: #03b7d6;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in;
+}
+
+.icon-delete {
+    color: #a30000;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in;
+}
+
+.icon-edit:hover, 
+.icon-delete:hover {
+    color: orange;
+    transform: scale(1.2);
+}

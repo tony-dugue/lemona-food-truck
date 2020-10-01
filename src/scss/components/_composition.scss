@@ -1,0 +1,52 @@
+/* =============== COMPOSITION =============== */
+
+.composition {
+    position: relative;
+    height: 20vh;
+
+    &__img {
+        position: absolute;
+        width: 55%;
+
+        border-radius: 6px;
+        box-shadow: $box-shadow-img;
+        cursor: pointer;
+        outline-offset: 5px;
+        transition: all .2s ease-out;
+        z-index: 10;
+
+        &--p1 {
+            top: -20px;
+            left: 0;
+        }
+        &--p2 {
+            top: 20px;
+            right: 0;
+        }
+        &--p3 {
+            top: 100px;
+            left: 20%;
+        }
+
+        &:hover {
+            box-shadow: 0 25px 40px rgba(black, .5);
+            outline: 8px solid $color-primary;
+            transform: scale(1.2) translateY(-5px);
+            z-index: 30;
+        }
+    }
+
+    &:hover {
+        .composition__img:not(:hover) {
+            opacity: 0.4;
+            transform: scale(.9);
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .composition {
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+}

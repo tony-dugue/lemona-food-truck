@@ -1,0 +1,13 @@
+/* ========= section tableau des emplacements (client) ========= */
+
+.client {
+    .location {
+        background-color: $color-black;
+        color: $color-white;
+
+        td {
+            font-weight: 400;
+        }
+    }
+}
+

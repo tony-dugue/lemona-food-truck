@@ -1,0 +1,133 @@
+
+/* formulaire dans le dashboard */
+
+.dashForm {
+    padding: 0 30px 20px 30px;
+    width: 70%;
+
+    background: #fafafa;
+    border-radius: 2rem;
+
+    &__group {
+        margin: 30px 0;
+    }
+
+    &__label {
+        margin-right: 20px;
+        padding-bottom: 10px;
+
+        color: $color-secondary;
+        font-size: 1.2rem;
+    }
+
+    &__input {
+        font-weight: 600;
+        
+        &-img {
+            border: none;
+        }
+        &-price {
+            width: 20%;
+        }
+        &::placeholder {
+            font-weight: 300;
+        }
+
+    }
+
+    &__image {
+        display: block;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+input[type="file"] {
+    background: #fafafa;
+}
+
+@media screen and (max-width: 992px) {
+    .dashForm {
+        width: 100%;
+
+        &__input {
+            &-price {
+                width: 40%;
+            }
+        }
+    }
+}
+
+/* formulaire personnalisé intéractif */
+
+.td__form {
+
+    &-group {
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &-input,
+    &-textarea,
+    &-select {
+        display: block;
+        padding: 10px 25px;
+        width: 90%;
+
+        background-color: rgba($color-white ,0.8);
+        border: none;
+        border-bottom: 3px solid transparent;
+        border-radius: 2px;
+        color: $color-text;
+        font-size: 1rem;
+
+        transition: all .3s ease-out;
+
+        &:focus {
+            border-bottom: 3px solid $color-primary;
+            box-shadow: 0 16px 32px rgba($color-black, 0.1);
+            outline: none;
+
+            /* Cible tous élément input  dont la valeur ne satisfait pas aux critères de validation */
+            &:invalid {
+                border-bottom: 3px solid $color-primary;
+            }
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-secondary;
+            font-size: 1rem;
+        }
+
+        /* sélectionner tous les input ou textarea affichant un texte de substitution. */
+        &:placeholder-shown+.form__label {
+            opacity: 0;
+            transform: translateY(-60px);
+            visibility: hidden;
+        }
+    }
+
+    &-select {
+        display: inline-block;
+        padding: 0 25px;
+        width: 55%;
+
+        background-color: rgba($color-white ,0.8);
+        color: $color-secondary;
+        font-size: 1rem;
+    }
+
+    &-label {
+        display: block;
+        margin-left: 25px;
+        margin-top: 14px;
+
+        color: $color-white;
+        font-size: 1.2rem;
+        font-weight: 500;
+        transition: all .3s ease-out;
+    }
+}

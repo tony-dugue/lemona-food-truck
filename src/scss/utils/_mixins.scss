@@ -1,0 +1,26 @@
+// MEDIA QUERY MANAGER
+/*
+    DESKTOP FIRST
+    0 à 576px : XtraSmall (phone portrait)
+    576px à 768px: Small (phone paysage)
+    768px à 992px: Medium (tablette)
+    992px à 1200px: large (desktop)
+    > 1200px: XtraLarge (default style)
+
+    BREAKPOINT ARGUMENT CHOICES : 
+    phone / tab / large / screen
+
+    import
+    @include respond(phone) { ... }
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {
+            @content
+        }
+    }
+}
+
+
+

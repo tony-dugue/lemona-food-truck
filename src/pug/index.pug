@@ -1,0 +1,46 @@
+include mixins/_utils.pug
+
+doctype html
+html(lang='fr')
+    +head('Login', 'Page de connexion de Lemona Food Truck', 'login.css')
+    body.page-login
+        .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column.justify-content-center
+
+            main.login.mt-4.text-center
+                .container.w-100
+                    .row.align-items-center
+                        .col-lg-6.col-sm-12.order-2.order-lg-1.mt-5.mt-lg-0
+
+                            h2.login__title Bonjour
+
+                            form.login__form(action="./dashboard.html", method="GET")
+
+                                .form-group
+                                    label.login__form-label(for='email') Votre email
+                                    input#email.form-control.login__form-input.mx-auto(type='email', placeholder="name@example.com", name="email", required)
+
+                                .form-group
+                                    label.login__form-label(for='password') Votre mot de passe
+                                    input#password.form-control.login__form-input.mx-auto(type='password', placeholder="mot de passe", name="password", pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$", required)
+
+                                    //- REGEX PASSWORD: Minimum 6 characters, une lettre majuscule, une minuscule et un nombre
+
+                                .form-group.form-check.login__form-label-check
+                                    input#check.form-check-input(type='checkbox', name="actif")
+                                    label.form-check-label(for='check') Se souvenir de moi
+
+                                +btn-secondary('', 'Se connecter')
+
+                        .col-lg-6.col-sm-12.order-1.order-lg-2
+                            img.login__image(src="./images/login.jpg", alt="")
+
+            footer
+                .container
+                    .row
+                        .footer
+                            +logo
+                            +social
+
+
+
+

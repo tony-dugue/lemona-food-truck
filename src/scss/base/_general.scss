@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    color: $color-text;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+section {
+    padding-bottom: 20px;
+}

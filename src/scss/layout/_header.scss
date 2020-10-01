@@ -1,0 +1,109 @@
+/* -----------------------------------------------------------------------------------
+                            CLIENT
+----------------------------------------------------------------------------------- */
+
+.client {
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: fixed;
+        width: calc(100% - 60px);
+        height: 80px;
+    
+        background-color:rgba($color-white, 0.9);
+        box-shadow: 0 0 1em rgba($color-black, 0.4);
+        z-index: 1000;
+
+        &__logo {
+            margin-left: 20px;
+        }
+
+        .social {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 40px;
+
+            &__icon {
+                margin-left: 15px;
+                cursor: pointer;
+
+                svg {
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .client {
+        .header {
+            flex-direction: column;
+            width: calc(100% - 40px);
+    
+            .logo__text {
+                display: flex;
+                align-items: center;
+    
+                &--small {
+                    margin-left: 10px;
+                    margin-top: 5px;
+                }
+            }
+
+            .social {
+                display: none;
+            }
+        }
+    }
+}
+
+/* -----------------------------------------------------------------------------------
+                            DASHBOARD
+----------------------------------------------------------------------------------- */
+
+.dashboard {
+    &__header {
+        background: linear-gradient(to bottom, $color-primary 97%, $color-text);
+        box-shadow: 0 16px 24px 2px rgba($color-black, 0.14);
+
+        &-logo {
+            margin-left: 1rem;
+        }
+
+        &-search {
+            &Input {
+                width: 50vw;
+                margin-right: 1rem;
+
+                border-color: #555554; 
+            }
+            &Icon {
+                fill: $color-text;
+                font-size: 1.3rem;
+                transition: all 0.2s ease-in;
+
+                &:hover {
+                    transform: scale(1.2)
+                }
+            }
+        }
+        &-link {
+            a {
+                margin-right: 1rem;
+
+                color: $color-text;
+                font-weight: 600;
+                transition: all 0.2s ease-in;
+
+                &:hover {
+                    transform: scale(1.1)
+                }
+            }
+        }
+    }
+}

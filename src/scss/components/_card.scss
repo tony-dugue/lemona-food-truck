@@ -1,0 +1,43 @@
+/* =============== CARD MENU CLIENT =============== */
+
+.menu {
+
+    .card {
+        margin-bottom: 50px;
+
+        border-radius: 10px;
+        box-shadow: $box-shadow-img;
+        overflow: hidden;
+    }
+
+    .card-body {
+        min-height: 250px;
+        padding: 0 10px 10px 10px;
+    }
+
+    &__text {
+        font-weight: 600;
+    }
+
+    &__img {
+        height: 11rem;
+        margin: 0 auto;
+        width: 100%;
+
+        background-color: $color-black;
+        object-fit: contain;
+    }
+
+    &__title {
+        color: $color-secondary;
+        font-size: 1.25rem;
+    }
+
+    &__price {
+        margin-bottom: 15px;
+        margin-top: 0;
+
+        color: $color-primary;
+        font-size: 1.25rem;
+    }
+}

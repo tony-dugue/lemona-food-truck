@@ -1,0 +1,138 @@
+include data/_data.pug
+include mixins/_utils.pug
+include mixins/_utils-client.pug
+
+doctype html
+html(lang='fr')
+    +head('Saumon sauce citron', 'Présentation du menu Saumon sauce citron', 'client.css')
+    body.client.article
+        header.header
+            .header__logo
+                +logo
+            +nav
+            +social
+
+        
+        section.article-hero
+            .container-fluid.px-md-0.h-100
+                .row.flex-column.justify-content-center.align-items-center.h-100
+                    h2#about.heading__lg.pb-md-4 Saumon Sauce Citron
+                    img.article-hero__img(src=menus[0].img, alt=menus[0].title)
+
+        .icon-chevron
+            svg.bi.bi-chevron-double-down(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' d='M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z')
+                path(fill-rule='evenodd' d='M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z')
+
+        
+        main.main
+
+            section.article-content
+                .container
+                    .px-5.py-3.pt-md-4.pb-md-4.mx-auto.text-center
+
+                    .article-content__presentation
+                        .row
+                            .col-md-4.text-center.d-flex.flex-column.justify-content-center
+
+                                img.article-content__img(src=menus[0].img, alt=menus[0].title)
+
+                                h4.heading__md #{menus[0].price} €
+
+                                .article-content__stars
+
+                                    svg.article-content__star(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z')
+                                    svg.article-content__star(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z')
+                                    svg.article-content__star(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z')
+                                    svg.article-content__star(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                        path(fill-rule='evenodd' d='M5.354 5.119L7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.519.519 0 0 1-.146.05c-.341.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.171-.403.59.59 0 0 1 .084-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027c.08 0 .16.018.232.056l3.686 1.894-.694-3.957a.564.564 0 0 1 .163-.505l2.906-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.002 2.223 8 2.226v9.8z')
+                                    svg.article-content__star(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                        path(fill-rule='evenodd' d='M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z')
+
+                            .col-md-8
+                                h2#about.heading__lg.pb-md-4 #{menus[0].title}
+                                p <span class="article-content__title">Ingrédients : </span> #{menus[0].ingredient}
+                                p <span class="article-content__title">Description : </span> #{menus[0].desc}
+                                .article-content__info
+                                    svg.heading__sm(width='1.2em' height='1.2em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                        path(fill-rule='evenodd' d='M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z')
+                                        path(d='M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z')
+                                        circle(cx='8' cy='4.5' r='1')
+                                    <span>#{menus[0].info}</span>
+
+                                .article-content__supplement
+
+                                    p Supplément possible :
+
+                                        .article-content__item
+                                            svg.bi.bi-plus(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                                path(fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z')
+                                            <span>Riz (+ 1,50€)</span>
+
+                                        .article-content__item
+                                            svg.bi.bi-plus(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                                path(fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z')
+                                            <span>Frites (+ 2€)</span>
+
+
+                                        .article-content__item
+                                            svg.bi.bi-plus(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                                path(fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z')
+
+                                            <span>Quinoa et légumes (+ 1.50€)</span>
+
+                                        .article-content__item
+                                            svg.bi.bi-plus(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                                                path(fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z')
+                                            <span>Frites (+ 2.20€)</span>
+
+                    .article-content__review
+                        .row.align-items-center
+
+                            .col-md-4.text-center.article-content__form
+                                h4.article-content__title DONNEZ VOTRE AVIS
+                                img.article-content__img--small(src="./images/logo.png" alt="" width="50")
+                                p Afin de permettre l'amélioration de nos services, n'hésitez pas à nous laissez votre avis, une suggestion, ...
+
+                            .col-md-8
+
+                                .td__form
+                                    form.form(action="#" method="GET")
+
+                                        h4.heading__md Que pensez-vous de ce plat ?
+
+                                        .form-group.td__form-group
+
+                                        .form__group.td__form-group.mt-5
+                                            input.form__input.td__form-input(type="email", placeholder="Votre email", id="email" name="email", pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+", required)
+                                            label.form__label.td__form-label(for="email") Votre email
+
+                                        .form-group.td__form-group
+                                            textarea#comments.td__form-textarea(rows='3', placeholder="Une idée, une suggestion ?", name="comments")
+                                            label.form__label.td__form-label(for='comments') Une idée, une suggestion ?
+
+                                        select#stars.custom-select.td__form-select.mr-sm-2(name="stars", required)
+                                            option(selected='') Choisir un nombre d'étoiles
+                                            option(value='1') 1
+                                            option(value='2') 2
+                                            option(value='3') 3
+                                            option(value='4') 4
+                                            option(value='5') 5
+                                        
+                                        +btn-primary('', 'Envoyer')
+
+
+        footer
+            .container
+                .row
+                    .footer
+                        .col
+                            +logo
+                        .col
+                            .copyright
+                                p Design & intégration : Tony Dugué - 2020
+                        .col
+                            +social

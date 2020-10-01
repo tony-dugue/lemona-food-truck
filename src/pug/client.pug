@@ -1,0 +1,213 @@
+include data/_data.pug
+include mixins/_utils.pug
+include mixins/_utils-client.pug
+
+doctype html
+html(lang='fr')
+    +head('Accueil', 'Bienvenue sur le site de Lemona Food Truck', 'client.css')
+    body.client
+        header.header
+            .header__logo
+                +logo
+            +nav
+            +social
+
+        
+        section.hero
+            .container-fluid.px-md-0.h-100
+                .col-lg-7.col-md-8.col-sm-12.d-flex.justify-content-center.flex-column.pl-5.pr-5.h-100
+                    .hero__heading.text-center
+                        h1.hero__heading--main Envie d'une pause<span> Citron</span>
+                        p.hero__heading--sub Venez découvrir les menus très citronnés du <span class="logo">LEMONA&nbsp;Food&nbsp;Truck</span> dans une ambiance <span class="theme">hawaienne</span>&nbsp; en ville et à la plage
+                        +btn-primary("#menu", "Voir les menus")
+                        +btn-secondary("#location", "Nous trouver")
+
+        .icon-chevron
+            svg.bi.bi-chevron-double-down(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                path(fill-rule='evenodd' d='M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z')
+                path(fill-rule='evenodd' d='M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z')
+
+        
+        main.main
+
+            section.presentation
+                .container
+
+                    .px-5.py-3.pt-md-4.pb-md-4.mx-auto.text-center
+
+                        h2#about.heading__lg.pb-md-4 Qui sommes-nous ?
+
+                        h4.heading__md Encore un Food Truck ? Oui mais différent !
+                        p En manque d'inspiration pour manger ? Venez découvrir dans une ambiance hawaienne tous les bienfaits du citron dans nos différentes recettes fait-maison.
+                        p <span class="text__sub">Lemona</span> signifiant <span class="text__main">citron</span> en hawaien est un Food Truck proposant des plats et des boissons à base de <span class="text__main">citron</span>.
+                        p Que vous soyez cocktail, salade ou plutôt pâtisserie, venez à notre rencontre et nous sommes sûr que vous trouverez votre bonheur !
+
+            section.garage
+                .container
+                    .row
+                        .px-3.py-3.pb-md-4.mx-auto.text-center
+                            h2.heading__lg Notre garage
+
+                            .row.align-items-center.px-4
+                                .col-lg-6.px-5.pt-5
+                                    p Le garage de <span class="text__sub">Lemona Food Truck</span> possède 3 Food Truck pour aller plus facilement à votre rencontre.
+
+                                    p Jacky avec son Food Truck crème vous servira ses menus dans une ambiance surfeur au bord des plages tout l'été.
+
+                                    p Gwendoline avec son Food Truck jaune et Mike avec son Food Truck bleu viendront à vous en ville au plus près de votre lieu de travail afin d'amener une touche citronnée lors de votre pause le midi où tout simplement pour une petite détente avec un bon coktail en fin de journée.
+
+                                .col-lg-6.pb-5
+                                    .composition
+                                        img.composition__img.composition__img--p1(src="./images/truck1.jpg", alt="logo")
+                                        img.composition__img.composition__img--p2(src="./images/truck2.jpeg", alt="logo")
+                                        img.composition__img.composition__img--p3(src="./images/truck3.jpg", alt="logo")
+
+            section.health
+                .container
+                    .row
+                        .px-3.py-3.pt-md-5.pb-md-4.mx-auto.text-center
+                            h2.heading__lg Les bienfaits du citron
+
+                    .row.text-center.px-4
+                        .col-lg-3
+                            +check
+                            h5.heading__sm Bon pour la ligne
+                            p Le citron nettoie l'organisme en éliminant les toxines présentes dans le corps. Et en plus, il n'est pas du tout calorique !
+                        .col-lg-3
+                            +check
+                            h5.heading__sm Bon pour l'organisme
+                            p Riche en vitamine C et grâce à ses antioxydants naturels, le citron booste le système immunitaire.
+                        .col-lg-3
+                            +check
+                            h5.heading__sm Bon pour les cheveux
+                            p Le citron éclaircit, fait briller les cheveux et leur donne du volume ! Il agit également contre les pellicules.
+                        .col-lg-3
+                            +check
+                            h5.heading__sm Bon pour la peau
+                            p Les antioxydants du citron atténue les tâches brunes de la peau et agit contre le vieillissement.
+
+            section.engagement
+                .container
+                    .row
+                        .px-3.py-3.pt-md-5.pb-md-4.mx-auto.text-center
+                                h2.heading__lg Nos engagements
+
+                    .row.text-center
+                        .col.px-5
+                                p Nous vous proposons des plats préparés à base de produits frais et locaux. Pour le choix de nos fournisseurs, nous privilégions les circuits courts de distribution. Les légumes, les fruits, les poissons, les viandes, les pains que nous utilisons sont produits par des entrepreneurs locaux (oui oui, même le fameux <span class="text__main">citron</span> à la base de tous nos menus !) pour une qualité garantie et une empreinte carbone réduite !
+
+            section.menus#menu
+                .container
+                    .row
+                        .px-3.py-3.pb-md-4.mx-auto.text-center
+                            h2.heading__lg Notre carte
+                            h4.heading__md Côté table
+
+                    .row.text-center.mx-3
+                        each menu in menus
+                            +cardMenu(menu.img, menu.title, menu.ingredient, menu.price, menu.info)
+
+                .container
+                    .row
+                        .px-3.py-3.pb-md-4.mx-auto.text-center
+                            h4.heading__md Côté boisson / snacking
+
+                    .row.text-center.mx-3
+                        each boisson in boissons
+                            +cardMenu(boisson.img, boisson.title, boisson.ingredient, boisson.price, boisson.info)
+
+            section.location#location
+                .container
+                    .row
+                        .px-3.py-3.pt-md-5.pb-md-4.mx-auto.text-center
+                            h2.heading__lg Où nous trouver
+                            p Calendrier des emplacements
+
+                .container
+                    .row.text-center.mx-3
+                        table.table.table-bordered.table-dark.location
+                            thead
+                                tr
+                                    th(scope="col")
+                                    th.location__title(scope="col") 
+                                        | Jacky <span class="location__title--sub">Food truck crème</span>
+                                    th.location__title(scope="col") 
+                                        | Gwendoline <span class="location__title--sub">Food truck jaune</span>
+                                    th.location__title(scope="col") 
+                                        | Mike <span class="location__title--sub">Food truck bleu</span>
+
+                            tbody
+                                tr
+                                    th( scope="row") Lundi
+                                    td Dinard
+                                    td Rennes sud
+                                    td Nantes
+
+                                tr
+                                    th( scope="row") Mardi
+                                    td Saint Malo
+                                    td Fougères
+                                    td Vannes
+
+                                tr
+                                    th( scope="row") Mercredi
+                                    td Cancale
+                                    td Rennes nord
+                                    td Lorient
+
+                                tr
+                                    th( scope="row") Jeudi
+                                    td La Baule
+                                    td Vitré
+                                    td Quimper
+
+                                tr
+                                    th( scope="row") Vendredi
+                                    td Vannes
+                                    td Rennes ouest
+                                    td Brest
+
+                                tr
+                                    th( scope="row") Samedi
+                                    td Quiberon
+                                    td Rennes est
+                                    td Morlaix
+
+                                tr
+                                    th(scope="row") Dimanche
+                                    td Saint Brieuc
+                                    td.text-danger(colspan="2") On reste au garage
+
+        section.news
+            .container
+                .row
+                    .news__form
+                        form.form(action="/client.html" method="GET")
+
+                            h2.news__form-heading Recevoir la newsletter
+
+                            .td__form
+
+                            .form__group.td__form-group
+                                input.form__input.td__form-input(type="text",  placeholder="Nom", id="name" name="username", required)
+                                label.form__label.td__form-label(for="name") Votre nom
+
+                            .form__group.td__form-group
+                                input.form__input.td__form-input(type="email", placeholder="email", id="email" name="email",  required)
+                                label.form__label.td__form-label(for="email") Votre email
+
+
+                            
+                            +btn-secondary('', 'Envoyer')
+
+        footer
+            .container
+                .row
+                    .footer
+                        .col
+                            +logo
+                        .col
+                            .copyright
+                                p Design & intégration : Tony Dugué - 2020
+                        .col
+                            +social

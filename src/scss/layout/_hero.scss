@@ -1,0 +1,70 @@
+.client {
+
+    .hero {
+        height: 91vh;
+        background-image: linear-gradient(to left, rgba($color-black, 0.2), rgba($color-black, 0.4)), url('../images/hero1.jpg');
+        background-position: 55%;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+
+        &__heading {
+            color: $color-white;
+            font-weight: 600;
+
+            &--main {
+                margin-bottom: 50px;
+                font-size: 3.125rem;
+                font-weight: 900;
+                font-family: satisfy;
+
+                span {
+                    color: $color-primary;
+                    font-size: 3.75rem;
+                }
+            }
+
+            &--sub {
+                margin-bottom: 3.125rem;
+                font-size: 1.75rem;
+                font-weight: 500;
+
+                .logo {
+                    display: inline;
+                    color: $color-secondary;
+                    font-weight: bold;
+                }
+
+                .theme {
+                    font-weight: bold;
+                    font-size: 2.4rem;
+                    font-family: satisfy;
+                }
+            }
+        }
+    }
+
+    .article-hero {
+        height: 91vh;
+        background-image: linear-gradient(to left, rgba($color-black, 0.2), rgba($color-black, 0.4)), url('../images/ardoise.jpg');
+        background-position: 55%;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .client {
+        .hero {
+            &__heading {
+                &--main{
+                    font-size: 2.5rem;
+                    margin-bottom: 30px;
+                }
+                &--sub {
+                    font-size: 1.5rem;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
