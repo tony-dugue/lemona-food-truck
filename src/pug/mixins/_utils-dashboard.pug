@@ -20,39 +20,37 @@ mixin dashboardHeader
 //- Declaration Dashboard Sidebar
 
 mixin dashboardSidebar
-    sidebar
-        nav
+    .border-bottom.mb-3
+        .sidebar__avatar
+            img.sidebar__avatar-logo(src="./images/avatar.png" alt="avatar")
+            h5.sidebar__avatar-name Tony Dugué
 
-            .border-bottom.mb-3
-                .sidebar__avatar
-                    img.sidebar__avatar-logo(src="./images/avatar.png" alt="avatar")
-                    h5.sidebar__avatar-name Tony Dugué
+    nav
+        ul.nav.flex-column
+            li.nav-item: a.nav-link.sidebar__item.active(href='./client.html')
+                | Voir le site
+            li.nav-item: a.nav-link.sidebar__item.active(href='./dashboard.html') 
+                | Voir le Dashboard
+        
+        h6.px-3.mt-4.mb-1.sidebar__title Edition
 
-            ul.nav.flex-column
-                li.nav-item: a.nav-link.sidebar__item.active(href='./client.html')
-                    | Voir le site
-                li.nav-item: a.nav-link.sidebar__item.active(href='./dashboard.html') 
-                    | Voir le Dashboard
-            
-            h6.px-3.mt-4.mb-1.sidebar__title Edition
+        ul.nav.flex-column.mb-2
+            li.nav-item: a.nav-link.sidebar__item(href='./construction.html') 
+                | Ajouter un profil
+            li.nav-item: a.nav-link.sidebar__item(href='./add.html')
+                | Ajouter un menu
+            li.nav-item: a.nav-link.sidebar__item(href='./add.html')
+                | Ajouter une boisson
 
-            ul.nav.flex-column.mb-2
-                li.nav-item: a.nav-link.sidebar__item(href='./construction.html') 
-                    | Ajouter un profil
-                li.nav-item: a.nav-link.sidebar__item(href='./add.html')
-                    | Ajouter un menu
-                li.nav-item: a.nav-link.sidebar__item(href='./add.html')
-                    | Ajouter une boisson
+        h6.px-3.mt-4.mb-1.sidebar__title Communication
 
-            h6.px-3.mt-4.mb-1.sidebar__title Communication
-
-            ul.nav.flex-column.mb-2
-                li.nav-item: a.nav-link.sidebar__item(href='./construction.html')
-                    | Gestion des médias
-                li.nav-item: a.nav-link.sidebar__item(href='./construction.html')
-                    | Newsletter
-                li.nav-item: a.nav-link.sidebar__item(href='./construction.html')
-                    | Calendrier lieux
+        ul.nav.flex-column.mb-2
+            li.nav-item: a.nav-link.sidebar__item(href='./construction.html')
+                | Gestion des médias
+            li.nav-item: a.nav-link.sidebar__item(href='./construction.html')
+                | Newsletter
+            li.nav-item: a.nav-link.sidebar__item(href='./construction.html')
+                | Calendrier lieux
 
 //- Declaration Dashboard Footer
 mixin dashboardFooter

@@ -10,9 +10,32 @@
     margin: 50px auto;
     width: 75vw;
 
+    @include responsive(md) {
+        background-image: linear-gradient(105deg, rgba($color-black, 0.8) 0%, rgba($color-black, 0.8) 70%, transparent 50%),url(../images/newsletter.jpg);
+    }
+    @include responsive(sm) {
+        background-image: linear-gradient(0deg, rgba($color-black, 0.8) 0%, rgba($color-black, 0.8) 100%, transparent 50%),url(../images/newsletter.jpg);
+    }
+
     &__form {
         width: 50%;
         padding: 10px 50px;
+
+        @include responsive(md) {
+            width: 80%;
+        }
+        @include responsive(sm) {
+            width: 100%;
+        }
+
+        &-label {
+            @include responsive(md) {
+                font-size: 1rem;
+            }
+            @include responsive(sm) {
+                font-size: 1rem;
+            }
+        }
 
         &-heading {
             margin-top: 20px;
@@ -21,34 +44,3 @@
         }
     }
 }
-
-@media screen and (max-width: 992px) {
-
-    .news {
-        background-image: linear-gradient(105deg, rgba($color-black, 0.8) 0%, rgba($color-black, 0.8) 70%, transparent 50%),url(../images/newsletter.jpg);
-
-        &__form {
-            width: 80%;
-
-            &-label {
-                font-size: 1rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    .news {
-        background-image: linear-gradient(0deg, rgba($color-black, 0.8) 0%, rgba($color-black, 0.8) 100%, transparent 50%),url(../images/newsletter.jpg);
-
-        &__form {
-            width: 100%;
-
-            &-label {
-                font-size: 1rem;
-            }
-        }
-    }
-}
-

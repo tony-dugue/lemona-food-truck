@@ -4,6 +4,10 @@
     padding: 10px 30px 30px 30px;
     background: linear-gradient(to bottom, $color-black 100vh, #FBCA00);
 
+    @include responsive(md) {
+        padding: 20px;
+    }
+
     .main {
         margin-top: 5vh;
         background: $color-white;
@@ -19,13 +23,6 @@
     background: linear-gradient(to bottom, $color-black 40vh,  $color-primary 70vh, $color-primary);
     height: 100vh;
     overflow: hidden;
-}
-
-@media screen and (max-width: 992px) {
-
-    .client {
-        padding: 20px;
-    }
 }
 
 /* =============== DASHBOARD =============== */

@@ -35,10 +35,8 @@
 .icon-check {
     color: green;
     font-size: 2.5rem;
-}
 
-@media screen and (max-width: 992px) {
-    .icon-check {
+    @include responsive(md) {
         font-size: 2rem;
 
         & + h5 {

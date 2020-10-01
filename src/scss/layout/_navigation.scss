@@ -4,11 +4,20 @@
         display: flex;
         align-items: center;
         margin-top: 12px;
+
+        @include responsive(md) {
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
     }
 
     &__item {
         margin-right: 50px;
         list-style: none;
+
+        @include responsive(md) {
+            margin-right: 30px;
+        }
 
         a {
             border-top: 1px solid ($color-white, 0.9);
@@ -42,16 +51,4 @@
     }
 }
 
-@media screen and (max-width: 992px) {
-    .navigation {
-
-        ul {
-            margin-bottom: 5px;
-            margin-top: 0;
-        }
-        &__item {
-            margin-right: 30px;
-        }
-    }
-}
 

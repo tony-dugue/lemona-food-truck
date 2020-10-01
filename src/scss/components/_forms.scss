@@ -8,6 +8,10 @@
     background: #fafafa;
     border-radius: 2rem;
 
+    @include responsive(md) {
+        width: 100%;
+    }
+
     &__group {
         margin: 30px 0;
     }
@@ -28,6 +32,10 @@
         }
         &-price {
             width: 20%;
+
+            @include responsive(md) {
+                width: 40%;
+            }
         }
         &::placeholder {
             font-weight: 300;
@@ -44,18 +52,6 @@
 
 input[type="file"] {
     background: #fafafa;
-}
-
-@media screen and (max-width: 992px) {
-    .dashForm {
-        width: 100%;
-
-        &__input {
-            &-price {
-                width: 40%;
-            }
-        }
-    }
 }
 
 /* formulaire personnalisé intéractif */

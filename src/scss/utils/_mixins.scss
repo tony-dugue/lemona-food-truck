@@ -1,26 +1,39 @@
 // MEDIA QUERY MANAGER
 /*
     DESKTOP FIRST
-    0 à 576px : XtraSmall (phone portrait)
-    576px à 768px: Small (phone paysage)
-    768px à 992px: Medium (tablette)
-    992px à 1200px: large (desktop)
+    0 à 576px : XtraSmall (phone portrait) => xs
+    576px à 768px: Small (phone paysage) => sm
+    768px à 992px: Medium (tablette) => md
+    992px à 1200px: large (desktop) => lg
     > 1200px: XtraLarge (default style)
 
-    BREAKPOINT ARGUMENT CHOICES : 
-    phone / tab / large / screen
-
-    import
-    @include respond(phone) { ... }
+    import dans scss
+    @include responsive(phone) { ... }
 */
 
-@mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media (max-width: 37.5em) {
-            @content
+@mixin responsive($breakpoint) {
+
+    @if $breakpoint == xs {
+        @media (max-width: 36em) {  // 16 x 36 = 576px
+            @content;
+        }
+    }
+
+    @if $breakpoint == sm {         // 16 x 48 = 768px
+        @media (max-width: 48em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == md {       // 16 x 62 = 992px
+        @media (max-width: 62em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == lg {        // 16 x  = 1200px
+        @media (max-width: 75em) {
+            @content;
         }
     }
 }
-
-
-

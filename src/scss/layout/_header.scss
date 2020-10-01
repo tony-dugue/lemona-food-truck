@@ -17,35 +17,18 @@
         box-shadow: 0 0 1em rgba($color-black, 0.4);
         z-index: 1000;
 
+        @include responsive(md) {
+            flex-direction: column;
+            width: calc(100% - 40px);
+        }
+
         &__logo {
             margin-left: 20px;
         }
 
-        .social {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin-right: 40px;
+        .logo__text {
 
-            &__icon {
-                margin-left: 15px;
-                cursor: pointer;
-
-                svg {
-                    height: 25px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .client {
-        .header {
-            flex-direction: column;
-            width: calc(100% - 40px);
-    
-            .logo__text {
+            @include responsive(md) {
                 display: flex;
                 align-items: center;
     
@@ -54,9 +37,25 @@
                     margin-top: 5px;
                 }
             }
+        }
 
-            .social {
+        .social {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 40px;
+
+            @include responsive(md) {
                 display: none;
+            }
+
+            &__icon {
+                margin-left: 15px;
+                cursor: pointer;
+
+                svg {
+                    height: 25px;
+                }
             }
         }
     }
@@ -71,16 +70,28 @@
         background: linear-gradient(to bottom, $color-primary 97%, $color-text);
         box-shadow: 0 16px 24px 2px rgba($color-black, 0.14);
 
+        @include responsive(xs) {
+            flex-direction: column;
+        }
+
         &-logo {
             margin-left: 1rem;
+            margin-right: 1rem;
         }
 
         &-search {
             &Input {
-                width: 50vw;
+                min-width: 50vw;
                 margin-right: 1rem;
 
-                border-color: #555554; 
+                border-color: #555555; 
+
+                @include responsive(sm) {
+                    min-width: 30vw;
+                }
+                @include responsive(xs) {
+                    min-width: 80vw;
+                }
             }
             &Icon {
                 fill: $color-text;
