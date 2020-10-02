@@ -13,7 +13,7 @@ html(lang='fr')
 
                             h2.login__title Bonjour
 
-                            form.login__form(action="./dashboard.html", method="GET")
+                            form.login__form(action="./dashboard.html", method="POST")
 
                                 .form-group
                                     label.login__form-label(for='email') Votre email
@@ -34,11 +34,12 @@ html(lang='fr')
                         .col-lg-6.col-sm-12.order-1.order-lg-2
                             img.login__image(src="./images/login.jpg", alt="")
 
-            footer
+            footer.footer
                 .container
-                    .row
-                        .footer
+                    .row.justify-content-sm-between.align-items-center.justify-content-center
+                        .col-xs-12
                             +logo
+                        .col-xs-12
                             +social
 
 

@@ -23,11 +23,35 @@
     }
 }
 
+/* =============== LOGIN =============== */
+
+.page-login {
+    .footer {
+        .logo {
+            margin-left: 35px;
+
+            @include responsive(xs) {
+                margin: 0;
+            }
+        }
+        .social {
+            padding-right: 45px;
+
+            @include responsive(xs) {
+                padding: 0 0 10px 0;
+            }
+        }
+    }
+}
+
 /* =============== DASHBOARD =============== */
 
 .dashboard {
     .footer {
+        padding-top: 0.5rem;
+
         background: #ebebeb;
+
         .logo {
             padding-left: 40px;
         }

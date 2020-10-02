@@ -33,9 +33,23 @@
     &__content {
         display: block;
         margin-top: 0.5rem;
+    }
+    .construction-page {
+        height: calc(100vh - 70px);
 
-        .construction-page {
-            height: calc(100vh - 70px);
+        &__text {
+            @include responsive(md) {
+                padding-left: 40px;
+                padding-right: 40px;
+
+                h2 {
+                    font-size: 1.75rem;
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 }

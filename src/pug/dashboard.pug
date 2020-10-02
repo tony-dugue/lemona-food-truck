@@ -14,99 +14,100 @@ html(lang='fr')
                     .col-md-3.col-lg-3.col-xl-2.d-md-block.collapse.pt-3.sidebar
                         +dashboardSidebar
 
-                    main.col-md-9.ml-sm-auto.col-lg-9.col-xl-10
+                    .col-md-9.ml-sm-auto.col-lg-9.col-xl-10.px-0
+                        main
 
-                        //- ================= MAIN CONTENT ============================
+                            //- ================= MAIN CONTENT ============================
 
-                        .dashboard__content.px-5
+                            .dashboard__content.px-5
 
-                            h2.heading__dash.border-bottom.mt-3 Tableau de bord
+                                h2.heading__dash.border-bottom.mt-3 Tableau de bord
 
-                            .row
-                                .col-lg-4
-                                    .stats
-                                        p.stats__data 1298 <span>personnes</span>
-                                        p.stats__desc Souscription à la newsletter
+                                .row
+                                    .col-lg-4
+                                        .stats
+                                            p.stats__data 1298 <span>personnes</span>
+                                            p.stats__desc Souscription à la newsletter
 
-                                .col-lg-4
-                                    .stats
-                                        p.stats__data 22 <span>menus</span>
-                                        p.stats__desc Nbre de menus crées
+                                    .col-lg-4
+                                        .stats
+                                            p.stats__data 22 <span>menus</span>
+                                            p.stats__desc Nbre de menus crées
 
-                                .col-lg-4
-                                    .stats
-                                        p.stats__data 698 <span>visites</span>
-                                        p.stats__desc Visite sur le site (mois en cours)
+                                    .col-lg-4
+                                        .stats
+                                            p.stats__data 698 <span>visites</span>
+                                            p.stats__desc Visite sur le site (mois en cours)
 
-                            .container
+                                .container
 
-                                h3.heading__dash--small.mt-5 Aperçu des objectifs financiers pour le mois en cours : <span>octobre 2020</span>
+                                    h3.heading__dash--small.mt-5 Aperçu des objectifs financiers pour le mois en cours : <span>octobre 2020</span>
 
-                                .dash-progress
+                                    .dash-progress
 
-                                    .progress
-                                        .progress-bar.dash-progress-1(role='progressbar' style='width: 70%' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100') 1210 / 1728 ventes
-                                    p Nbre de vente totale
+                                        .progress
+                                            .progress-bar.dash-progress-1(role='progressbar' style='width: 70%' aria-valuenow='70' aria-valuemin='0' aria-valuemax='100') 1210 / 1728 ventes
+                                        p Nbre de vente totale
 
-                                    .progress
-                                        .progress-bar.dash-progress-2(role='progressbar' style='width: 60%' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100') 60%
-                                    p Nbre de vente (partie repas)
+                                        .progress
+                                            .progress-bar.dash-progress-2(role='progressbar' style='width: 60%' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100') 60%
+                                        p Nbre de vente (partie repas)
 
-                                    .progress
-                                        .progress-bar.dash-progress-3(role='progressbar' style='width: 90%' aria-valuenow='90' aria-valuemin='0' aria-valuemax='100') 90%
-                                    p Nbre de vente (partie boisson et snacking)
+                                        .progress
+                                            .progress-bar.dash-progress-3(role='progressbar' style='width: 90%' aria-valuenow='90' aria-valuemin='0' aria-valuemax='100') 90%
+                                        p Nbre de vente (partie boisson et snacking)
 
-                                    .progress
-                                        .progress-bar.dash-progress-4(role='progressbar' style='width: 75%' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100') 23 500 / 31 300 euros
-                                    p Bénéfices
+                                        .progress
+                                            .progress-bar.dash-progress-4(role='progressbar' style='width: 75%' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100') 23 500 / 31 300 euros
+                                        p Bénéfices
 
 
-                            h2.heading__dash.border-bottom.mt-5 Edition partie Repas
+                                h2.heading__dash.border-bottom.mt-5 Edition partie Repas
 
-                            +btn-primary('./add.html', 'Ajouter un menu')
+                                +btn-primary('./add.html', 'Ajouter un menu')
 
-                            .table-responsive.mt-3
-                                table.menuEdition.table.table-striped.table-sm.text-center
+                                .table-responsive.mt-3
+                                    table.menuEdition.table.table-striped.table-sm.text-center
 
-                                    thead.menuEdition__head
-                                    tr.menuEdition__head-item
-                                        th #
-                                        th Titre
-                                        th Photo
-                                        th Prix&nbsp;(€)
-                                        th Crée le
-                                        th Modifié le
-                                        th En ligne
-                                        th
+                                        thead.menuEdition__head
+                                        tr.menuEdition__head-item
+                                            th #
+                                            th Titre
+                                            th Photo
+                                            th Prix&nbsp;(€)
+                                            th Crée le
+                                            th Modifié le
+                                            th En ligne
+                                            th
 
-                                        tbody.menuEdition__body
+                                            tbody.menuEdition__body
 
-                                            each menu, key in menus
-                                                +tableMenu('M-' + key, menu.img, menu.title, menu.price, menu.date_create, menu.date_modif, menu.visible)
+                                                each menu, key in menus
+                                                    +tableMenu('M-' + key, menu.img, menu.title, menu.price, menu.date_create, menu.date_modif, menu.visible)
 
-                            h2.heading__dash.border-bottom.mt-3 Edition partie Apéro
+                                h2.heading__dash.border-bottom.mt-3 Edition partie Apéro
 
-                            +btn-primary('./add.html', 'Ajouter une boisson / un snacking')
+                                +btn-primary('./add.html', 'Ajouter une boisson / un snacking')
 
-                            .table-responsive.mt-3
-                                table.menuEdition.table.table-striped.table-sm.text-center
+                                .table-responsive.mt-3
+                                    table.menuEdition.table.table-striped.table-sm.text-center
 
-                                    thead.menuEdition__head
-                                    tr.menuEdition__head-item
-                                        th #
-                                        th Titre
-                                        th Photo
-                                        th Prix&nbsp;(€)
-                                        th Crée le
-                                        th Modifié le
-                                        th En ligne
-                                        th
+                                        thead.menuEdition__head
+                                        tr.menuEdition__head-item
+                                            th #
+                                            th Titre
+                                            th Photo
+                                            th Prix&nbsp;(€)
+                                            th Crée le
+                                            th Modifié le
+                                            th En ligne
+                                            th
 
-                                        tbody.menuEdition__body
+                                            tbody.menuEdition__body
 
-                                            each boisson, key in boissons
-                                                +tableMenu('B-' + key, boisson.img, boisson.title, boisson.price, boisson.date_create, boisson.date_modif, boisson.visible)
+                                                each boisson, key in boissons
+                                                    +tableMenu('B-' + key, boisson.img, boisson.title, boisson.price, boisson.date_create, boisson.date_modif, boisson.visible)
 
-                        +dashboardFooter
+                            +dashboardFooter
 
 

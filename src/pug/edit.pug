@@ -10,67 +10,68 @@ html(lang='fr')
             +dashboardHeader
             .container-fluid
                 .row
-                    .col-md-3.col-lg-2.d-md-block.collapse.pt-3.sidebar
+                    .col-md-3.col-lg-3.col-xl-2.d-md-block.collapse.pt-3.sidebar
                         +dashboardSidebar
-                        
-                    main.col-md-9.ml-sm-auto.col-lg-10
 
-                        //- ================= MAIN CONTENT ============================
+                    .col-md-9.ml-sm-auto.col-lg-9.col-xl-10.px-0
+                        main
 
-                        .dashboard__content
+                            //- ================= MAIN CONTENT ============================
 
-                            h2.heading__dash.border-bottom Edition d'un élément
+                            .dashboard__content
 
-                            .container
-                                .row.mx-auto.justify-content-start
+                                h2.heading__dash.border-bottom Edition d'un élément
 
-                                    form.dashForm.mb-5(action="./dashboard.html" method="GET")
+                                .container
+                                    .row.mx-auto.justify-content-start
 
-                                        .form-group.dashForm__group
-                                            label.dashForm__label(for='edit-title') Type d'élément :
-                                            
-                                            .form-check.form-check-inline
-                                                input#inlineRadio1.form-check-input(type='radio' name='menuType' value='menu' checked)
-                                                label.form-check-label(for='menu') Menu
+                                        form.dashForm.mb-5(action="./dashboard.html" method="POST")
 
-                                            .form-check.form-check-inline
-                                                input#inlineRadio2.form-check-input(type='radio' name='menuType' value='boisson')
-                                                label.form-check-label(for='boisson') Boisson / Snacking
+                                            .form-group.dashForm__group
+                                                label.dashForm__label(for='edit-title') Type d'élément :
+                                                
+                                                .form-check.form-check-inline
+                                                    input#inlineRadio1.form-check-input(type='radio' name='menuType' value='menu' checked)
+                                                    label.form-check-label(for='menu') Menu
 
-                                        .form-group.dashForm__group
-                                            label.dashForm__label(for='edit-title') Nom du menu
-                                            input#edit-title.form-control.dashForm__input(type='text' value='Saumon sauce citron' placeholder="Nom du menu" name="title")
+                                                .form-check.form-check-inline
+                                                    input#inlineRadio2.form-check-input(type='radio' name='menuType' value='boisson')
+                                                    label.form-check-label(for='boisson') Boisson / Snacking
 
-                                        .form-group.dashForm__group
-                                            label.dashForm__label(for='edit-image') Image d'illustration
-                                            img.dashForm__image(src="./images/plat1.png" alt="")
-                                            input#edit-image.form-control.dashForm__input-img(type='file' name="image")
+                                            .form-group.dashForm__group
+                                                label.dashForm__label(for='edit-title') Nom du menu
+                                                input#edit-title.form-control.dashForm__input(type='text' value='Saumon sauce citron' placeholder="Nom du menu" name="title")
 
-                                        .form-group.dashForm__group
-                                            label.dashForm__label(for='edit-ingredient') Liste des ingrédients
-                                            input#edit-ingredient.form-control.dashForm__input(type='text' value='saumon, salade, tomate, persil, citron' placeholder="Liste des ingrédients principaux" name="ingredient")
+                                            .form-group.dashForm__group
+                                                label.dashForm__label(for='edit-image') Image d'illustration
+                                                img.dashForm__image(src="./images/plat1.png" alt="")
+                                                input#edit-image.form-control.dashForm__input-img(type='file' name="image")
 
-                                        .form-group.dashForm__group
-                                            label.dashForm__label(for='edit-price') Prix
-                                            .input-group.mb-3.dashForm__input-price
-                                                .input-group-prepend
-                                                    span.input-group-text €
-                                                input#edit-price.form-control.dashForm__input(type='number' value='12.99' step="0.5" name="price")
+                                            .form-group.dashForm__group
+                                                label.dashForm__label(for='edit-ingredient') Liste des ingrédients
+                                                input#edit-ingredient.form-control.dashForm__input(type='text' value='saumon, salade, tomate, persil, citron' placeholder="Liste des ingrédients principaux" name="ingredient")
 
-                                        .form-group.dashForm__group
-                                            label.dashForm__label(for='edit-desc') Description
-                                            textarea#edit-desc.form-control.dashForm__input(rows='3', placeholder="Description", name="description") Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.
+                                            .form-group.dashForm__group
+                                                label.dashForm__label(for='edit-price') Prix
+                                                .input-group.mb-3.dashForm__input-price
+                                                    .input-group-prepend
+                                                        span.input-group-text €
+                                                    input#edit-price.form-control.dashForm__input(type='number' value='12.99' step="0.5" name="price")
 
-                                        .form-group.dashForm__group
-                                            label.dashForm__label(for='edit-info') Informations complémentaires
-                                            textarea#edit-info.form-control.dashForm__input(rows='3', placeholder="Toutes informations importantes", name="informations") contient du gluten
+                                            .form-group.dashForm__group
+                                                label.dashForm__label(for='edit-desc') Description
+                                                textarea#edit-desc.form-control.dashForm__input(rows='3', placeholder="Description", name="description") Lorem ipsum dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag. Brunch raclette vexillologist post-ironic glossier ennui XOXO mlkshk godard pour-over blog tumblr humblebrag. Blue bottle put a bird on it twee prism biodiesel brooklyn. Blue bottle ennui tbh succulents.
 
-                                        .form-check.dashForm__check.mb-3
-                                            input#edit-check.form-check-input.dashForm__check-input(type='checkbox', name="online")
-                                            label.form-check-label.dashForm__label(for='edit-check') Visible en ligne
+                                            .form-group.dashForm__group
+                                                label.dashForm__label(for='edit-info') Informations complémentaires
+                                                textarea#edit-info.form-control.dashForm__input(rows='3', placeholder="Toutes informations importantes", name="informations") contient du gluten
 
-                                        +btn-secondary('', 'Enregistrer les modifications')
-                                        +btn-primary('./article.html', 'Aperçu')
+                                            .form-check.dashForm__check.mb-3
+                                                input#edit-check.form-check-input.dashForm__check-input(type='checkbox', name="online")
+                                                label.form-check-label.dashForm__label(for='edit-check') Visible en ligne
 
-                        +dashboardFooter
+                                            +btn-secondary('', 'Enregistrer les modifications')
+                                            +btn-primary('./article.html', 'Aperçu')
+
+                                +dashboardFooter
 

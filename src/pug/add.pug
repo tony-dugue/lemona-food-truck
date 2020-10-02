@@ -10,11 +10,11 @@ html(lang='fr')
             +dashboardHeader
             .container-fluid
                 .row
-                    sidebar
-                        .col-md-3.col-lg-2.d-md-block.collapse.pt-3.sidebar
-                            +dashboardSidebar
-                    main
-                        .col-md-9.ml-sm-auto.col-lg-10
+                    .col-md-3.col-lg-3.col-xl-2.d-md-block.collapse.pt-3.sidebar
+                        +dashboardSidebar
+
+                    .col-md-9.ml-sm-auto.col-lg-9.col-xl-10.px-0
+                        main
 
                             //- ================= MAIN CONTENT ============================
 
@@ -25,7 +25,7 @@ html(lang='fr')
                                 .container
                                     .row.mx-auto.justify-content-start
 
-                                        form.dashForm.mb-5(action="./dashboard.html" method="GET")
+                                        form.dashForm.mb-5(action="./dashboard.html" method="POST")
 
                                             .form-group.dashForm__group
                                                 label.dashForm__label(for='edit-title') Type d'élément :
@@ -73,4 +73,4 @@ html(lang='fr')
                                             +btn-secondary('', 'Enregistrer les modifications')
                                             +btn-primary('./article.html', 'Aperçu')
 
-                                +dashboardFooter
+                            +dashboardFooter

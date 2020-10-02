@@ -7,6 +7,10 @@
         background-size: cover;
         clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
 
+        @include responsive(xs) {
+            clip-path: none;
+        }
+
         &__heading {
             color: $color-white;
             font-weight: 600;
