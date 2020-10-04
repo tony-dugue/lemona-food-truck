@@ -7,6 +7,7 @@
 
             @include responsive(md) {
                 height: 20vh;
+                margin-top: 2rem;
             }
         }
     }
@@ -39,6 +40,13 @@
             max-width: 250px;
             object-fit: contain;
             margin: 0 auto;
+
+            @include responsive(md) {
+                height: 8rem;
+            }
+            @include responsive(sm) {
+                height: 12rem;
+            }
 
             &--small {
                 margin: 1.5rem 0; 
