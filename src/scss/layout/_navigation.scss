@@ -1,5 +1,9 @@
 .navigation {
 
+    @include responsive(sm) {
+        display: none;
+    }
+
     ul {
         display: flex;
         align-items: center;

@@ -11,12 +11,15 @@ html(lang='fr')
                 +logo
             +nav
             +social
+            .header__hamburger
+                svg.bi.bi-list(width='1em' height='1em' viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg')
+                    path(fill-rule='evenodd' d='M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z')
 
         
         section.article-hero
             .container-fluid.px-md-0.h-100
-                .row.flex-column.justify-content-center.align-items-center.h-100
-                    h2#about.heading__lg.pb-md-4 Saumon Sauce Citron
+                .col.d-flex.justify-content-center.align-items-center.text-center.flex-column.pl-5.pr-5.h-100
+                    h2.heading__lg.pb-md-4 Saumon Sauce Citron
                     img.article-hero__img(src=menus[0].img, alt=menus[0].title)
 
         .icon-chevron
@@ -115,7 +118,7 @@ html(lang='fr')
                                             label.form__label.td__form-label(for='comments') Une idée, une suggestion ?
 
                                         select#stars.custom-select.td__form-select.mr-sm-2(name="stars", required)
-                                            option(selected='') Choisir un nombre d'étoiles
+                                            option(selected='') Choisir un nombre d'étoile
                                             option(value='1') 1
                                             option(value='2') 2
                                             option(value='3') 3

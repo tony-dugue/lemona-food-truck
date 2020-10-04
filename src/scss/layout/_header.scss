@@ -22,6 +22,10 @@
             width: calc(100% - 40px);
         }
 
+        @include responsive(sm) {
+            flex-direction: row;
+        }
+
         &__logo {
             margin-left: 20px;
         }
@@ -56,6 +60,22 @@
                 svg {
                     height: 25px;
                 }
+            }
+        }
+
+        &__hamburger {
+            display: none;
+            font-size: 2.5rem;
+            margin-right: 2rem;
+            transition: color 0.2s ease-in-out;
+            cursor: pointer;
+
+            @include responsive(sm) {
+                display: block;
+            }
+
+            &:hover {
+                color: orange;
             }
         }
     }

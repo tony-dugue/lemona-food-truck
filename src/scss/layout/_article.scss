@@ -1,8 +1,13 @@
 .article {
 
     &-hero {
+
         &__img {
             height: 30vh;
+
+            @include responsive(md) {
+                height: 20vh;
+            }
         }
     }
 
@@ -14,6 +19,10 @@
 
         &__presentation {
             margin-bottom: 3rem;
+
+            @include responsive(sm) {
+                text-align: center;
+            }
         }
 
         &__review {
